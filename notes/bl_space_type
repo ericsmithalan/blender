@@ -1,0 +1,21 @@
+VIEW_3D – 3D Viewport area
+IMAGE_EDITOR – UV/Image Editor area
+NODE_EDITOR – Node Editor area
+SEQUENCE_EDITOR – Video Sequencer area
+CLIP_EDITOR – Movie Clip Editor area
+DOPESHEET_EDITOR – Dope Sheet area
+GRAPH_EDITOR – Graph Editor area
+NLA_EDITOR – Nonlinear Animation area
+TEXT_EDITOR – Text Editor area
+PROPERTIES – Properties area
+FILE_BROWSER – File Browser area
+SPREADSHEET – Spreadsheet area
+
+Other possible values: WINDOW, HEADER, CHANNELS, TEMPORARY, TOOLS, TOOL_PROPS, PREVIEW, HUD, NAVIGATION_BAR, EXECUTE, FOOTER, TOOL_HEADER, XR.
+
+
+ self.layout.operator(
+            operator='mesh.primitive_monkey_add',
+            icon='BLENDER',
+            text=''
+        )
