@@ -1,6 +1,5 @@
 import bpy
 
-
 bl_info = {
     "name": "Erics Addons",
     "description": "Addon for testing",
@@ -11,16 +10,15 @@ bl_info = {
 }
 
 
-class OT_CursorSnapOperator(bpy.types.Operator):
-    """Snap Cursor Operator"""
+class OT_CursorSnap(bpy.types.Operator):
     bl_idname = "object.cursor_snap_operator"
     bl_label = "Snap Cursor Operator"
     bl_options = {'REGISTER', 'UNDO'}
 
-    # @classmethod
-    # def poll(cls, context):
-    #     obj = context.active_object
-    #     return (obj is not None and obj.type == 'MESH')
+    @classmethod
+    def poll(cls, context):
+        obj = context.active_object
+        return (obj is not None and obj.type == 'MESH')
 
     def execute(self, context):
         bpy.ops.view3d.snap_cursor_to_selected()
@@ -28,14 +26,6 @@ class OT_CursorSnapOperator(bpy.types.Operator):
         bpy.ops.object.origin_set(type='ORIGIN_CURSOR', center='BOUNDS')
         bpy.ops.object.editmode_toggle()
         return {'FINISHED'}
-
-
-# def register():
-#     bpy.utils.register_class(OT_CursorSnapOperator)
-
-
-# def unregister():
-#     bpy.utils.unregister_class(OT_CursorSnapOperator)
 
 
 class ERICSADDONS_PT_Eric(bpy.types.Panel):
@@ -51,20 +41,22 @@ class ERICSADDONS_PT_Eric(bpy.types.Panel):
         layout = self.layout
 
         row = layout.row()
-        row.label(text="Snap Cursor to Selected")
+        row.operator(OT_CursorSnap.bl_idname)
 
-        row = layout.row()
-        row.operator(OT_CursorSnapOperator.bl_idname)
+        layout.operator('script.reload_my_scripts')
+
+        # row = layout.row()
+        # layout.label(text=str(count))
 
 
 def register():
     bpy.utils.register_class(ERICSADDONS_PT_Eric)
-    bpy.utils.register_class(OT_CursorSnapOperator)
+    bpy.utils.register_class(OT_CursorSnap)
 
 
 def unregister():
     bpy.utils.unregister_class(ERICSADDONS_PT_Eric)
-    bpy.utils.unregister_class(OT_CursorSnapOperator)
+    bpy.utils.unregister_class(OT_CursorSnap)
 
 
 if __name__ == "__main__":
