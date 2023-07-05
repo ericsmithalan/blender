@@ -1,0 +1,3 @@
+- Measure out from a vertex and drop floating vertex that can be snapped to. 
+- Apply All Transforms and Set cursor to Object Center
+- Selected Vertex distance from closest edge based on normal direction
