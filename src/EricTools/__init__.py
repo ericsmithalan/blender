@@ -1,14 +1,13 @@
 import bpy
-from .ot_cursor_snap import *
-from .pt_eric import *
-from .ot_apply_snap import *
-from .ot_add_single_vertex import *
-from .ot_mouse_click_single_vertex import *
+from .oporators.ot_cursor_snap import *
+from .panels.pt_main_panel import *
+from .oporators.ot_apply_snap import *
+from .oporators.ot_add_vert import *
 
 bl_info = {
     "name": "Erics Addons",
     "description": "Addon for testing",
-    "author": "Tester",
+    "author": "Eric Smith",
     "blender": (2, 80, 0),
     "version": (1, 0, 0),
     "category": "Eric",
@@ -16,10 +15,9 @@ bl_info = {
 
 classes = (
     OT_CursorSnap,
-    PT_Eric,
+    PT_MainPanel,
     OT_ApplySnap,
-    OT_Add_Single_Vertex,
-    OT_MouseClickSingleVertext
+    OT_AddVert
 )
 
 

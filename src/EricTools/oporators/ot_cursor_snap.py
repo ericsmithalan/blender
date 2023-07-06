@@ -3,14 +3,14 @@ import bpy
 
 class OT_CursorSnap(bpy.types.Operator):
     bl_idname = "object.cursor_snap_operator"
-    bl_label = "Snap Cursor & Origin"
+    bl_label = "Snap"
     bl_description = "Snap Cursor and Origin to Active"
     bl_options = {'REGISTER', 'UNDO'}
 
     @classmethod
     def poll(cls, context):
         obj = context.active_object
-        return (obj is not None and obj.type == "MESH")
+        return (obj is not None and obj.type == "MESH" and obj.mode == 'EDIT')
 
     def execute(self, context):
         bpy.ops.view3d.snap_cursor_to_selected()
