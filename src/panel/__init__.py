@@ -3,7 +3,7 @@ from .ot_cursor_snap import *
 from .pt_eric import *
 from .ot_apply_snap import *
 from .ot_add_single_vertex import *
-from .ot_mouse_position import *
+from .ot_mouse_click_single_vertex import *
 
 bl_info = {
     "name": "Erics Addons",
@@ -19,7 +19,7 @@ classes = (
     PT_Eric,
     OT_ApplySnap,
     OT_Add_Single_Vertex,
-    OT_Mouse_Position
+    OT_MouseClickSingleVertext
 )
 
 

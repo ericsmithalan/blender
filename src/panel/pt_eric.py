@@ -3,6 +3,7 @@ from .ot_cursor_snap import OT_CursorSnap
 from .ot_apply_snap import OT_ApplySnap
 from .ot_add_single_vertex import OT_Add_Single_Vertex
 from .ot_mouse_position import OT_Mouse_Position
+from .ot_mouse_click_single_vertex import OT_MouseClickSingleVertext
 
 
 class PT_Eric(bpy.types.Panel):
@@ -31,7 +32,7 @@ class PT_Eric(bpy.types.Panel):
 
             row = layout.row()
 
-            row.operator(OT_Mouse_Position.bl_idname)
+            row.operator(OT_MouseClickSingleVertext.bl_idname)
 
         # OBJECT MODE
         if context.active_object.mode == 'OBJECT':

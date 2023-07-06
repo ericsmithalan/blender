@@ -14,5 +14,5 @@ class OT_Add_Single_Vertex(bpy.types.Operator):
         return (obj is not None and obj.type == 'MESH')
 
     def execute(self, context):
-        # bpy.ops.mesh.primitive_vert_add()
+        bpy.ops.mesh.primitive_vert_add()
         return {'FINISHED'}
