@@ -13,5 +13,15 @@ class OT_AddVert(bpy.types.Operator):
         return (obj is not None and obj.type == 'MESH' and obj.mode == 'EDIT')
 
     def execute(self, context):
+        bpy.ops.mesh.select_mode(type="VERT")
+
+        obj = context.active_object
+        obj.update_from_editmode()
+
+        old_cursor_loc = context.scene.cursor.location.copy()
+        bpy.ops.view3d.snap_cursor_to_selected()
         bpy.ops.mesh.primitive_vert_add()
+
+        context.scene.cursor.location = old_cursor_loc
+
         return {'FINISHED'}

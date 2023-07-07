@@ -1,0 +1,5 @@
+
+Select Modes
+bpy.ops.mesh.select_mode(type="VERT")
+bpy.ops.mesh.select_mode(type="EDGE")
+bpy.ops.mesh.select_mode(type="FACE")
