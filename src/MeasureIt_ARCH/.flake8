@@ -1,7 +1,0 @@
-[flake8]
-ignore = F722, F821
-max_line_length = 120
-exclude =
-  .git,
-  __pycache__,
-  libs
