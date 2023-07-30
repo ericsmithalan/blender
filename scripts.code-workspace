@@ -1,0 +1,17 @@
+{
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "name": "Caddon",
+            "path": "./src/Caddon"
+        }
+    ],
+    "settings": {
+        "[python]": {
+            "editor.defaultFormatter": "ms-python.autopep8"
+        },
+        "python.formatting.provider": "none"
+    }
+}

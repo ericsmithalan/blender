@@ -10,9 +10,8 @@ class OT_AddLines(bpy.types.Operator):
     @classmethod
     def poll(cls, context):
         obj = context.active_object
-        return (obj is not None and obj.type == 'MESH' and obj.mode == 'EDIT')
+        return (obj is not None and obj.type == 'MESH' and obj.mode == 'OBJECT')
 
     def execute(self, context):
-        print("add lines")
-        bpy.ops.object.editmode_toggle()
+        print("cool")
         return {'FINISHED'}

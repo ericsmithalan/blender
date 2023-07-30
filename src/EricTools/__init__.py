@@ -3,6 +3,8 @@ from .oporators.ot_cursor_snap import *
 from .panels.pt_main_panel import *
 from .oporators.ot_apply_snap import *
 from .oporators.ot_add_vert import *
+from .oporators.ot_add_lines import *
+from .oporators.modal_mouse_position import *
 
 bl_info = {
     "name": "Erics Addons",
@@ -17,7 +19,9 @@ classes = (
     OT_CursorSnap,
     PT_MainPanel,
     OT_ApplySnap,
-    OT_AddVert
+    OT_AddVert,
+    OT_AddLines,
+    ModalMousePosition
 )
 
 
