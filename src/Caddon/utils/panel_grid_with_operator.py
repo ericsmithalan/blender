@@ -1,4 +1,4 @@
-from bpy.types import Panel, Operator
+from bpy.types import Panel, Operator, Context
 
 
 def panel_grid_with_operator(self: Panel, operator: Operator, factor: float = 0.8):

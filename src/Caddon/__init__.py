@@ -1,9 +1,7 @@
 import bpy
-from .caddon_ot_snap import CADDON_OT_Snap
-from .caddon_pt_main import CADDON_PT_Main
-from .caddon_ot_snap_selected import CADDON_OT_SnapSelected
-from .caddon_ot_snap_apply import CADDON_OT_SnapApply
-from bpy.types import Scene
+from .classes import CLASSES
+from .props import PROPS
+
 
 bl_info = {
     "name": "Caddon",
@@ -15,21 +13,14 @@ bl_info = {
     "category": "3D View"
 }
 
-classes = (
-    CADDON_OT_Snap,
-    CADDON_PT_Main,
-    CADDON_OT_SnapSelected,
-    CADDON_OT_SnapApply
-)
-
 
 def register():
-    for cls in classes:
+    for cls in CLASSES:
         bpy.utils.register_class(cls)
 
 
 def unregister():
-    for cls in reversed(classes):
+    for cls in reversed(CLASSES):
         bpy.utils.unregister_class(cls)
 
 
